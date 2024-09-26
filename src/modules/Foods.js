@@ -9,55 +9,49 @@ export default function Foods({
   userOrder,
   setUserOrder,
 }) {
-  function caption() {
-    if (chosenCategory === "hotDrinks") {
-      return (
-        <>
-          <h3>Hot drinks</h3>
-          <img src={CoffeeCup} alt="coffee cup"></img>
-        </>
-      );
-    } else if (chosenCategory === "coldDrinks") {
-      return (
-        <>
-          <h3>Cold Drinks</h3>
-          <img src={Lemonade} alt="lemonade cup"></img>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <h3> Desserts </h3>
-          <img src={CupCake} alt="Cupcake"></img>
-        </>
-      );
-    }
-  }
+  const categoryCaptions = {
+    hotDrinks: {
+      heading: "Hot Drinks",
+      imgSrc: CoffeeCup,
+      altText: "Coffee cup",
+    },
+    coldDrinks: {
+      heading: "Cold Drinks",
+      imgSrc: Lemonade,
+      altText: "Lemonade cup",
+    },
+    desserts: { heading: "Desserts", imgSrc: CupCake, altText: "Cupcake" },
+  };
+
+  const caption = () => {
+    const { heading, imgSrc, altText } = categoryCaptions[chosenCategory];
+    return (
+      <>
+        <h3>{heading}</h3>
+        <img src={imgSrc} alt={altText} />
+      </>
+    );
+  };
 
   function handleAddToOrder(food) {
+    const { name, price } = food;
     setUserOrder((prevOrder) => {
-      const existingItem = prevOrder.find((item) => item.name === food.name);
-
+      const existingItem = prevOrder.find((item) => item.name === name);
       if (existingItem) {
         return prevOrder.map((item) =>
-          item.name === food.name
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+          item.name === name ? { ...item, quantity: item.quantity + 1 } : item
         );
-      } else {
-        return [
-          ...prevOrder,
-          { name: food.name, price: food.price, quantity: 1 },
-        ];
       }
+      return [...prevOrder, { name, price, quantity: 1 }];
     });
   }
+
   return (
     <div className="food-items">
       <ul>
         {caption()}
         {foodsData[chosenCategory].map((food, i) => (
-          <li key={i}>
+          <li key={food.name}>
             {food.name}
             <span style={{ float: "right" }}>
               ${food.price}

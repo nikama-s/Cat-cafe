@@ -44,7 +44,6 @@ h1 {
   font-weight: 200;
   word-spacing: 40px;
   letter-spacing: 10px;
-  padding: 0;
 }
 
 img {
@@ -55,8 +54,8 @@ img {
 .options {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .paw-item {
@@ -80,12 +79,6 @@ img {
   filter: sepia(0.5) hue-rotate(2deg) saturate(1);
 }
 
-.paw-item p {
-  font-size: 2.3rem;
-  border-radius: 3rem;
-  text-align: center;
-}
-
 .menu-container {
   display: flex;
   gap: 40px;
@@ -97,20 +90,24 @@ img {
   flex-direction: column;
   margin-top: 20rem;
   margin-left: 4rem;
-  gap: 80px;
+  gap: 8rem;
 }
 
 .categories button {
-  padding: 10px 10px;
+  padding: 1rem;
   font-size: 2.5rem;
-  margin: 5px 0;
+  margin: 1rem 0;
 }
 
-.categories button:hover {
+.categories button:hover,
+.food-items button:hover,
+.order-items button:hover {
   background-color: rgb(251, 147, 182);
 }
 
-.food-items {
+.food-items,
+.order-items,
+.left-items {
   padding: 5rem;
   width: 58rem;
   background-color: #fff;
@@ -118,13 +115,15 @@ img {
   border-radius: 3rem;
 }
 
-.food-items ul {
+.food-items ul,
+.order-items ul {
   margin-top: -4rem;
   list-style-type: none;
   padding: 3rem;
 }
 
-.food-items ul li {
+.food-items ul li,
+.order-items ul li {
   padding: 2rem 0;
   border-bottom: 1px solid #ccc;
   font-size: 3rem;
@@ -136,6 +135,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 200;
 }
+
 .food-items img {
   max-height: 12rem;
   margin-bottom: 5rem;
@@ -143,65 +143,36 @@ h3 {
   vertical-align: middle;
 }
 
-.food-items button {
+.food-items button,
+.order-items button {
   margin-left: 2rem;
   padding: 0.5rem;
   font-size: 2rem;
-}
-
-.food-items button:hover {
-  background-color: rgb(251, 147, 182);
 }
 
 .left-items {
   display: flex;
   gap: 40px;
   margin-top: 1rem;
-  margin-left: 10rem;
-  padding: 5rem;
-  width: 60rem;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 15rem;
   text-align: center;
   font-size: 2.5rem;
   line-height: 1.8;
-  border-radius: 3rem;
-}
-
-.left-items h3 {
-  color: rgb(251, 147, 182);
 }
 
 .order-items {
-  margin-left: 10rem;
-  padding: 5rem;
-  width: 56rem;
+  margin-left: 15rem;
   min-height: 80rem;
-  background-color: #fff;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 3rem;
   font-size: 3rem;
-}
-
-.order-items ul {
-  margin-top: -4rem;
-  list-style-type: none;
-  padding: 3rem;
 }
 
 .order-items ul li {
   padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
   font-size: 2.5rem;
 }
-.order-items button {
-  margin-left: 2rem;
-  padding: 0.5rem;
-  font-size: 1.7rem;
-}
 
-.order-items button:hover {
-  background-color: rgb(251, 147, 182);
+.order-items button {
+  font-size: 1.7rem;
 }
 
 .order-items h3 {

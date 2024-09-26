@@ -23,7 +23,7 @@ export default function App() {
           <Order userOrder={userOrder} setUserOrder={setUserOrder} />
         )}
         <div className="cat-image">
-          <img src={Cat} alt="cat" />
+          <img src={Cat} alt="pink cat" />
         </div>
       </div>
     </>
