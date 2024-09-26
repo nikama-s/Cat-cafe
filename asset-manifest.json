@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Cat-cafe/static/css/main.f6f166fb.css",
+    "main.js": "/Cat-cafe/static/js/main.17533b8a.js",
+    "static/media/Paw.png": "/Cat-cafe/static/media/Paw.5ed7df0c53c7281a5193.png",
+    "static/media/CofeeCup.png": "/Cat-cafe/static/media/CofeeCup.7fcde112afabfb4e58b4.png",
+    "static/media/CupCake.jpg": "/Cat-cafe/static/media/CupCake.5bfda08b7510876eeb29.jpg",
+    "static/media/Cat (3).png": "/Cat-cafe/static/media/Cat (3).73e7e4b8044cd6b9ca2c.png",
+    "index.html": "/Cat-cafe/index.html",
+    "main.f6f166fb.css.map": "/Cat-cafe/static/css/main.f6f166fb.css.map",
+    "main.17533b8a.js.map": "/Cat-cafe/static/js/main.17533b8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6f166fb.css",
+    "static/js/main.17533b8a.js"
+  ]
+}
