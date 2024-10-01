@@ -192,6 +192,7 @@ h3 {
   position: absolute;
   right: 10%;
   top: 66.4%;
+  z-index: -1;
 }
 
 .main-layout img {
